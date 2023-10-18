@@ -25,8 +25,6 @@ while true; do
     elif [ "$option" = "Get Password" ]; then
         # Get Password
         if [ -e "$data_file" ]; then
-            echo "保存されているサイト名一覧:"
-            awk '/^サイト名:/{print $2}' "$data_file" | sort -u
             echo "表示するサイト名を入力してください: "
             read selected_site
 
